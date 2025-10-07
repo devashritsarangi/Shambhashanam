@@ -1,4 +1,4 @@
-# Shambhashanam - Voice Enabled Chatbot!
+# Shambhashanam - Voice enabled Chatbot.
 (2023 Project - uses GPT 3.5 - *now defunct*)
 
 Sambhashanam is an AI-powered voice-enabled chatbot designed to revolutionize conversational interactions.
