@@ -1,0 +1,200 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'Window.ui'
+#
+# Created by: PyQt5 UI code generator 5.15.10
+#
+# WARNING: Any manual changes made to this file will be lost when pyuic5 is
+# run again.  Do tnot edit this file unless you know what you are doing.
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets 
+from main import *
+
+voice = "male"
+voiceI = input("Voice Choice - [M]ale (default) or [F]emale? - ")
+if voiceI.lower() == "m":
+    voice = "male"
+elif voiceI.lower() == "f":
+    voice = "female"
+else:
+    voice = "female"
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(600, 400)
+        MainWindow.setMinimumSize(QtCore.QSize(600, 400))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.WindowText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Text, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ButtonText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(77, 77, 218))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(20, 26, 109))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ToolTipText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 128))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.PlaceholderText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Text, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ButtonText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(77, 77, 218))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(20, 26, 109))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ToolTipText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 128))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.PlaceholderText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(20, 26, 109))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(20, 26, 109))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ToolTipText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 128))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.PlaceholderText, brush)
+        MainWindow.setPalette(palette)
+        MainWindow.setFocusPolicy(QtCore.Qt.NoFocus)
+        MainWindow.setAutoFillBackground(False)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.frame = QtWidgets.QFrame(self.centralwidget)
+        font = QtGui.QFont()
+        font.setStyleStrategy(QtGui.QFont.PreferAntialias)
+        self.frame.setFont(font)
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.gridLayout = QtWidgets.QGridLayout(self.frame)
+        self.gridLayout.setObjectName("gridLayout")
+        self.mainLabel = QtWidgets.QLabel(self.frame)
+        self.mainLabel.setMinimumSize(QtCore.QSize(201, 31))
+        font = QtGui.QFont()
+        font.setFamily("Montserrat")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setStrikeOut(False)
+        font.setKerning(False)
+        font.setStyleStrategy(QtGui.QFont.PreferAntialias)
+        self.mainLabel.setFont(font)
+        self.mainLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.mainLabel.setObjectName("mainLabel")
+        self.gridLayout.addWidget(self.mainLabel, 0, 0, 1, 1)
+        self.label = QtWidgets.QLabel(self.frame)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setKerning(True)
+        font.setStyleStrategy(QtGui.QFont.PreferDefault)
+        self.label.setFont(font)
+        self.label.setTextFormat(QtCore.Qt.AutoText)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 1, 0, 1, 1)
+        self.speakBtn = QtWidgets.QPushButton(self.frame)
+        self.speakBtn.setMinimumSize(QtCore.QSize(200, 40))
+        self.speakBtn.setMaximumSize(QtCore.QSize(200, 100))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ButtonText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ButtonText, brush)
+        self.speakBtn.setPalette(palette)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift")
+        font.setPointSize(17)
+        font.setStyleStrategy(QtGui.QFont.PreferAntialias)
+        self.speakBtn.setFont(font)
+        self.speakBtn.setObjectName("speakBtn")
+        self.gridLayout.addWidget(self.speakBtn, 3, 0, 1, 1, QtCore.Qt.AlignHCenter)
+        self.chatWindow = QtWidgets.QTextEdit(self.frame)
+        self.chatWindow.setEnabled(True)
+        font = QtGui.QFont()
+        font.setFamily("Montserrat")
+        font.setPointSize(15)
+        font.setBold(False)
+        font.setKerning(False)
+        font.setStyleStrategy(QtGui.QFont.PreferAntialias)
+        self.chatWindow.setFont(font)
+        self.chatWindow.setFrameShape(QtWidgets.QFrame.WinPanel)
+        self.chatWindow.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.chatWindow.setLineWidth(1)
+        self.chatWindow.setDocumentTitle("")
+        self.chatWindow.setUndoRedoEnabled(False)
+        self.chatWindow.setReadOnly(True)
+        self.chatWindow.setObjectName("chatWindow")
+        self.gridLayout.addWidget(self.chatWindow, 2, 0, 1, 1)
+        self.verticalLayout.addWidget(self.frame)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+        def updateWindow(self):
+            with open('chat.txt', 'r') as f:
+                w = f.read()
+            self.chatWindow.append(w)
+
+        def elisten(self):
+            listen()
+            updateWindow(self)
+
+            with open('aimsg.txt', 'r') as f:
+                x = f.read()
+            speak(x, voice)
+
+        self.speakBtn.clicked.connect(lambda: elisten(self))
+        # self.speakBtn.clicked.connect(lambda: updateWindow(self))
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Sambhashanam"))
+        self.mainLabel.setText(_translate("MainWindow", "Sambhashanam"))
+        self.label.setText(_translate("MainWindow", "Designed by Devashrit Sarangi and Boudhayan Nayak - Class XI-F"))
+        self.speakBtn.setText(_translate("MainWindow", "Talk!"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
